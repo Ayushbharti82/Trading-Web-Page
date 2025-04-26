@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto & Trading Parallax</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+  <header class="header">
+   <nav class="navbar">
+     <div class="logo">
+       <i class="fas fa-chart-line"></i>
+       <span>CryptoTrader</span>
+     </div>
+     <ul class="nav-links">
+       <li><a href="#home" class="nav-link">Home</a></li>
+       <li><a href="#analysis" class="nav-link">Analysis</a></li>
+       <li><a href="#chart" class="nav-link">Charts</a></li>
+       <li><a href="#resources" class="nav-link">Resources</a></li>
+       <li><a href="#contact" class="nav-link">Contact</a></li>
+     </ul>
+     <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+</header>
+    <section class="pimg1" id="home">
+      <div class="ptext">
+        <span class="textBg"> Crypto Trading Insights </span>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <h2>Bitcoin: Digital Gold</h2>
+      <p>
+        Bitcoin (BTC) revolutionized finance as the first decentralized cryptocurrency. 
+        With a fixed supply of 21 million coins, it's often called "digital gold." 
+        Traders analyze BTC's price action for market trends, as it often leads altcoin movements. 
+        Key strategies include swing trading during volatility or long-term holding (HODLing). 
+        The 2024 halving reduced miner rewards, historically triggering bull runs due to supply shocks.
+      </p>
+    </section>
+
+    <section class="pimg2">
+      <div class="ptext">
+        <span class="textBg"> Technical Analysis </span>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <h2>Mastering Charts</h2>
+      <p>
+        Successful trading relies on technical analysis (TA). Tools like Moving Averages (MA), 
+        Relative Strength Index (RSI), and Fibonacci retracements help identify entry/exit points. 
+        Candlestick patterns—Doji, Hammer, Engulfing—signal reversals. Always combine TA with 
+        risk management: never invest more than 1-2% of your capital per trade. Remember, 
+        the trend is your friend until it ends!
+      </p>
+    </section>
+
+    
+    <section class="section section-light">
+      <h2>Live BTC/USD Chart</h2>
+      <div class="tradingview-widget-container">
+        <div id="tradingview_btc_chart" style="height: 500px; width: 100%;"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script>
+          new TradingView.widget({
+            "autosize": true,
+            "symbol": "BITSTAMP:BTCUSD",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "light",
+            "style": "1",
+            "locale": "en",
+            "enable_publishing": false,
+            "container_id": "tradingview_btc_chart"
+          });
+        </script>
+      </div>
+    </section>
+
+    <section class="pimg3">
+      <div class="ptext">
+        <span class="textBg"> Risk Management </span>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <h2>Trading Psychology</h2>
+      <p>
+        Emotions destroy traders. Greed leads to overtrading; fear causes missed opportunities. 
+        Stick to your plan: set stop-losses and take-profits before entering a trade. 
+        Diversify across crypto (BTC, ETH), stocks, and commodities. 
+        Use dollar-cost averaging (DCA) to reduce volatility impact. 
+        As Warren Buffett says, <i>"Be fearful when others are greedy, and greedy when others are fearful."</i>
+      </p>
+    </section>
+
+    <section class="pimg4">
+      <div class="ptext">
+        <span class="textBg"> To The Moon! 🚀 </span>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>Crypto Trading Insights</h3>
+        <p>Stay connected for the latest market analysis and trading tips</p>
+        
+        <div class="social-media">
+          <a href="#" class="social-icon twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://web telegram.org" class="social-icon telegram">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="#" class="social-icon youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="social-icon discord">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="#" class="social-icon github">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2023 Crypto Trading Insights. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+    
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        header.classList.toggle('scrolled', window.scrollY > 50);
+      });
+    
+      
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+    
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+    
+      
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>
